@@ -1,27 +1,27 @@
 
-function printDec(valor: number): string{
-    let dec = (valor).toString(10)
-    return dec
+function printDeci(valor: number): string{
+    let deci = (valor).toString(10)
+    return deci
 }
-function printHex(valor: number): string{
-    let hex = (valor).toString(16)
-    return hex
+function printHexi(valor: number): string{
+    let hexi = (valor).toString(16)
+    return hexi
 }
-function printOct(valor: number): string{
-    let oct = (valor).toString(8)
-    return oct
+function printOcta(valor: number): string{
+    let octa = (valor).toString(8)
+    return octa
 }
-function printBin(valor: number): string{
-    let bin = (valor).toString(2)
-    return bin
+function printBina(valor: number): string{
+    let bina = (valor).toString(2)
+    return bina
 }
 
-function mostrarTabela(): void{
+function Tabela(): void{
     console.log('Decimal Octal Hexadecimal  Binario')
     console.log('--------- ------ ----------- -------')
     for( let i = 0; i <=225; i++){
-        console.log(`${printDec(i)}  ${printOct(i)}   ${printHex(i)}   ${printBin(i)}`)
+        console.log(`${printDeci(i)}  ${printOcta(i)}   ${printHexi(i)}   ${printBina(i)}`)
     }
 }
 
-mostrarTabela()
+Tabela()
