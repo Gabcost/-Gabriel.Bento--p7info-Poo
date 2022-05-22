@@ -1,5 +1,5 @@
 function gerarRan(){
-    var random = [];
+    var random: number[] = [];
     var max = 6; 
     for(var i = 0; i<max; i++){
         var temp = Math.floor(Math.random()*60)

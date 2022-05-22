@@ -1,0 +1,37 @@
+"use strict";
+//
+Object.defineProperty(exports, "__esModule", { value: true });
+const Cliente2_1 = require("./Cliente2");
+const categoria_cliente2_1 = require("./categoria_cliente2");
+const Produtos2_1 = require("./Produtos2");
+const nota_fiscal2_1 = require("./nota_fiscal2");
+const item_nota_fiscal2_1 = require("./item_nota_fiscal2");
+//// Criando cliente ////
+let cliente = new Cliente2_1.Cliente(1, "José Maria da Silva", 100, "200.345.987-11", categoria_cliente2_1.TipoCliente.Pessoa_Fisica);
+console.log("=========================");
+console.log(cliente);
+console.log("=========================");
+console.log("ID=" + cliente.getID());
+console.log("NOMA=" + cliente.getNOME());
+console.log("CODIGO=" + cliente.getCODIGO());
+console.log("CNPJ_CPF=" + cliente.getCPF_CNPJ());
+console.log("TIPAGEM_CLIENTE=" + cliente.getTIPAGEM());
+let p1 = new Produtos2_1.Produto(1, 150, "Arroz Tio Joao", 8.00);
+let p2 = new Produtos2_1.Produto(2, 200, "Feijão Janjão", 7.00);
+let p3 = new Produtos2_1.Produto(3, 300, "Farinha da Boa", 5.50);
+let p4 = new Produtos2_1.Produto(4, 400, "Coca Alterada", 9.50);
+let nf = new nota_fiscal2_1.NotaFiscal(1, 201, cliente);
+let itnf1 = new item_nota_fiscal2_1.ItemNotaFiscal(1, 1, 10, p1);
+let itnf2 = new item_nota_fiscal2_1.ItemNotaFiscal(2, 2, 10, p2);
+let itnf3 = new item_nota_fiscal2_1.ItemNotaFiscal(3, 3, 10, p3);
+let itnf4 = new item_nota_fiscal2_1.ItemNotaFiscal(4, 4, 10, p4);
+itnf1.valorItemNotaFiscal();
+itnf2.valorItemNotaFiscal();
+itnf3.valorItemNotaFiscal();
+itnf4.valorItemNotaFiscal();
+nf.adicionarItem(itnf1);
+nf.adicionarItem(itnf2);
+nf.adicionarItem(itnf3);
+nf.adicionarItem(itnf4);
+nf.ValorTotal();
+console.log("=========================");
