@@ -81,28 +81,16 @@ export class NotaFiscal {
 
 
 
-    calculoValorNotaFiscal() : number {
-        let valorCalculado = 0;
-
-
-        return valorCalculado;
-
-    }
-
-    ///// Imprimir a NotaFiscal conforme o Layout definido /////
-    
-    imprimeNotaFiscal(): void {
-
-
-    }
-
-    ValorTotal(): void{
+    calculoValorNotaFiscal() : void{
         let total =0
         for(let i= 0; i< this.ITENS.length; i++){
             let valor = this.ITENS[i].getQUANTIDADE() * this.ITENS[i].getVALOR()
             total+=valor
         }
-        console.log("A sua nota tem o valor total de: R$ "+ total)
+        console.log("A sua nota tem o valor total de: R$ "+ total) 
+
     }
+
+    
     
 }

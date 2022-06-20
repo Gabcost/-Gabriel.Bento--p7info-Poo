@@ -41,7 +41,7 @@ nf.adicionarItem(itnf2);
 nf.adicionarItem(itnf3);
 nf.adicionarItem(itnf4);
 
-nf.ValorTotal();
+nf.calculoValorNotaFiscal();
 
 console.log("=========================");
 console.log(nf);
